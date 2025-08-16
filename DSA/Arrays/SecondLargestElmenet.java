@@ -17,7 +17,21 @@ public class SecondLargestElmenet {
         }
         return seondLargest;
     }
-    
+    public static int secondSmallestElment(int[] arr){
+        int secondSmallest=Integer.MAX_VALUE;
+        int smallest=Integer.MAX_VALUE;
+
+        for(int n:arr){
+            if(n<smallest){
+                secondSmallest=smallest;
+                smallest=n;
+            }else if(n<smallest && n>secondSmallest){
+                secondSmallest=n;
+
+            }
+        }
+        return secondSmallest;
+    }
     public static void main(String[] args) {
         // int[] arr = {-10, -20, -3, -50, -7};
         // int[] arr = {7, 7, 7, 7};
@@ -25,5 +39,8 @@ public class SecondLargestElmenet {
         int[] arr = {50, 40, 30, 20, 10};
        int n= secondLargestElmenet(arr);
        System.out.println(n);
+
+      int smallest= secondSmallestElment(arr);
+      System.out.println(smallest);
     }
 }
