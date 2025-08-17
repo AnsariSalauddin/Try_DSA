@@ -31,7 +31,8 @@ class RemoveDuplicateElment {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 1, 1, 2, 3, 3, 4, 4, 5, 6 };
+        // int[] arr = { 1, 1, 2, 3, 3, 4, 4, 5, 6 };
+        int[] arr={1,2,3,4,5};
         int[] res = removeDuplicateElment11(arr);
         for (int num : res) {
             System.out.print(num + " ");
