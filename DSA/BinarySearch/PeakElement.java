@@ -37,8 +37,8 @@ public static int findPeakElmenet(List<Integer> ls){
     public static void main(String[] args) {
          ArrayList<Integer> arr =
             new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 5, 1));
-           
-           int i= findPeakElmenet(arr);
-           System.out.println(arr.get(i));
+           List<Integer> ls = Arrays.asList(1, 3, 20, 4, 1, 0);
+           int i= findPeakElmenet(ls);
+           System.out.println(ls.get(i));
     }
 }
