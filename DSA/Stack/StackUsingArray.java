@@ -34,6 +34,13 @@ public class StackUsingArray<T> {
         if(isEmpty())throw new RuntimeException( "Stack is isEmpty");
         return arr[top--];
     }
+    
+        public T peek() {
+            if (isEmpty()) {
+                throw new RuntimeException("Stack is empty");
+            }
+            return arr[top];
+        }
 
     public static void main(String[] args) {
         StackUsingArray<Integer> st=new StackUsingArray<>(5);
