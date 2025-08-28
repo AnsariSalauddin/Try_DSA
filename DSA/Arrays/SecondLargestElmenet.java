@@ -37,21 +37,21 @@ public class SecondLargestElmenet {
 
     public static int kthLargestElment(int[] arr, int k) {
         boolean[] identity = new boolean[arr.length];
-        
-        int kth=0;
+
+        int kth = 0;
         for (int j = 0; j < k; j++) {
             int largest = Integer.MIN_VALUE;
             int index = -1;
             for (int i = 0; i < arr.length; i++) {
-                
-                if (!identity[i] &&arr[i] > largest) {
+
+                if (!identity[i] && arr[i] > largest) {
                     largest = arr[i];
                     index = i;
                 }
             }
-            if(index!=-1){
-                identity[index]=true;
-                kth=largest;
+            if (index != -1) {
+                identity[index] = true;
+                kth = largest;
             }
         }
         return kth;
@@ -67,7 +67,7 @@ public class SecondLargestElmenet {
 
         // int smallest = secondSmallestElment(arr);
         // System.out.println(smallest);
-      int kth= kthLargestElment(arr, 3);
-      System.out.println(kth);
+        int kth = kthLargestElment(arr, 3);
+        System.out.println(kth);
     }
 }
